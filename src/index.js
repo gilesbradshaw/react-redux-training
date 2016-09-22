@@ -6,7 +6,7 @@ import { createStore } from 'redux'
 import { combineReducers } from 'redux'
 import adder from './store/reducers'
 
-import App from './App'
+import App from './components/App'
 
 import { AppContainer } from 'react-hot-loader'
 
@@ -25,7 +25,7 @@ render(
 if(module.hot) {
   console.log('hot')
   module.hot.accept('./App', () => {
-    const App = require('./App').default
+    const App = require('./components/App').default
     console.log('hot replacing')
     render(
       <Provider store={store}>

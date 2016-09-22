@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { 
   add,
   subtract 
-} from './store/action-creators'
+} from '../store/action-creators'
 
 const mapStateToProps = (state, ownProps) => {
   return {

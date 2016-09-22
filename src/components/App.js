@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import styles from './index.scss'
+import styles from '../index.scss'
 import React from 'react'
 import { AppContainer } from 'react-hot-loader'
-import connector from './connector'
+import connector from '../containers/connector'
 
 class App extends React.Component {
   render() {
