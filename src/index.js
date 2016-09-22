@@ -1,11 +1,25 @@
 import React from 'react'
 import { render } from 'react-dom'
+
+
+import { createStore } from 'redux'
+import { combineReducers } from 'redux'
+import adder from './store/reducers'
+
 import App from './App'
 
 import { AppContainer } from 'react-hot-loader'
 
+let store = createStore(combineReducers({adder}))
+
+import { Provider } from 'react-redux'
+
 render(
-  <AppContainer><App/></AppContainer>, 
+  <Provider store={store}>
+    <AppContainer>
+      <App/>
+    </AppContainer>
+  </Provider>, 
   document.querySelector("#app"))
 
 if(module.hot) {
@@ -14,9 +28,11 @@ if(module.hot) {
     const App = require('./App').default
     console.log('hot replacing')
     render(
+      <Provider store={store}>
        <AppContainer>
         <App/>
       </AppContainer>
+    </Provider>
     , document.querySelector("#app"));
   });
 } else {
