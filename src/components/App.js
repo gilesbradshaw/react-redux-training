@@ -16,19 +16,28 @@ class App extends React.Component {
         <h1>
           {count}
         </h1>
-        <input type='button' onClick={()=>
-          {
-            subtract()
-          }
+        <input
+          className="btn btn-primary btn-lg"
+          type='button' 
+          onClick={()=>
+            {
+              subtract()
+            }
           
-          } value='-'/>
-        <input type='button' onClick={()=>
-          {
-            add()
-          }
+          } 
+          value='-'
+        />
+        <input
+          className="btn btn-primary btn-lg"
+          type='button' 
+          onClick={()=>
+            {
+              add()
+            }
           
-          } value='+'/>
-
+          } 
+          value='+'
+        />
 
 
         <p><span className={styles.myStyle}> here is a local. style</span></p>

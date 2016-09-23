@@ -1,17 +1,17 @@
 import { 
-  ADD,
-  SUBTRACT 
+  ADDER,
+  SUBTRACTER 
 } from './action-types'
 
 const initialState = {
   count: 0
 }
 const handlers = {
-  [ADD]: (state, action)=> ({
+  [ADDER]: (state, action)=> ({
     ...state,
     count: state.count+action.number
   }),
-  [SUBTRACT]: (state, action)=> ({
+  [SUBTRACTER]: (state, action)=> ({
     ...state,
     count: state.count-action.number
   })
